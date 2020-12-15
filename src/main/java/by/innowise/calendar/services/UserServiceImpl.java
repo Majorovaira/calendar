@@ -1,7 +1,8 @@
-package by.innowise.calendar.services.ifaces;
+package by.innowise.calendar.services;
 
 import by.innowise.calendar.model.User;
 import by.innowise.calendar.repositories.UserRepository;
+import by.innowise.calendar.services.ifaces.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -10,7 +11,7 @@ import java.util.List;
 
 
 @Service
-public class UserServiceImpl implements UserService{
+public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
     private final BCryptPasswordEncoder passwordEncoder;
