@@ -9,11 +9,13 @@ spring:
     username: root
 
   liquibase:
-    change-log:
+    enabled: true
+    change-log: classpath:liquibase/db.changelog-master.xml
     url: jdbc:postgresql://localhost:8081/calendar
     user: root
     password: root
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: none
     show-sql: true
+    open-in-view: false
